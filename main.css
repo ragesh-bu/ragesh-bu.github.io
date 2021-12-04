@@ -197,6 +197,14 @@
       vertical-align: top;
     }
 
+    /* Have the images stacked one over the other in a smaller screen*/
+    .blog_row{
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      text-align: center;
+    }
+
     /* Move button to the middle in a smaller screen */
     input[type=submit] {
       margin: auto;
@@ -221,4 +229,14 @@
       width: 100%;
       vertical-align: top;
     }
+
+    /* Have the images stacked one over the other in a smaller screen*/
+    .blog_row{
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    
   }
