@@ -60,6 +60,10 @@
     display: grid;
   }
 
+  #app {
+    display: grid;
+  }
+
   .my_pic {
     width: 20%;
     display: block;
@@ -72,19 +76,35 @@
   }
 
   /*Class for the pictures under the index page*/
-  .blog_row {
+  .blog_vue_row {
     display: flex;
+    flex-wrap: wrap;
   }
 
-  .blog_column {
-    flex: 33.33%;
+  .blog_vue_column {
     padding: 5px;
   }
 
-  .blog_page_imgs {
+  .blog_vue_page_imgs {
     height: 10rem;
     width: 15rem;
   }
+
+  /*Class for the flexboxes*/
+  .flex_row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flex_column {
+    padding: 20px;
+  }
+
+  .flex_imgs {
+    height: 10rem;
+    width: 15rem;
+  }
+
 
 .app_sub {
   text-align: center;
@@ -238,5 +258,5 @@
       text-align: center;
     }
 
-    
+
   }

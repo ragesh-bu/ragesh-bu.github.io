@@ -11,58 +11,89 @@
 </head>
 
 <body>
-  <main class="wrapper">
+  <div id="app" >
     <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item"><a href="index.html"> About </a></li>
-        <li class="nav-item"><a href="blog.html"> Blogs </a></li>
-        <li class="nav-item"><a href="apps.html"> Apps</a></li>
-        <li class="nav-item"><a href="quotes.html"> Quotes</a></li>
-        <li class="nav-item"><a href="contact.html"> Contact</a></li>
+      <ul class="nav-list" >
+        <li class="nav-item" v-for="navItem in navItems">
+          <a v-bind:href="navItem.href"> {{ navItem.name }} </a>
+        </li>
       </ul>
     </nav>
     <p>
-    <h1>Blogs</h1>
-    <div class="blog_row">
-      <div class="blog_column">
+    <h1>{{ pageName }}</h1>
+    <div class="blog_vue_row" >
+      <div class ="blog_vue_column" v-for="(item,index) in blogItems">
         <figure>
-          <a href="blogs/growth_of_big_data.html">
-            <img src="big_data_growth_picture.png" class="blog_page_imgs" alt="Big data growth">
-            <figcaption><sub>Big data growth</sub></figcaption>
+          <a v-bind:href = "item.href">
+            <img :src="item.imgSrc" class="blog_vue_page_imgs" alt="item.alt">
+            <figcaption><sub>{{item.text}}</sub></figcaption>
           </a>
         </figure>
-      </div>
-      <div class="column">
-        <figure>
-          <a href="blogs/big_data_engineers_toolkit.html">
-            <img src="big_data_engineer.png" class="blog_page_imgs" alt="Big data Engineer">
-            <figcaption><sub>Big Data Engineer's toolkits</sub></figcaption>
-          </a>
-        </figure>
-      </div>
-      <div class="column">
-        <figure>
-          <a href="blogs/intro_typescript.html">
-            <img src="typescript.png" class="blog_page_imgs" alt="Typescript">
-            <figcaption><sub>An introduction to typescript</sub></figcaption>
-          </a>
-        </figure>
+        <br v-if="index>3"/>
       </div>
     </div>
-    <div class="blog_row">
-      <div class="blog_column">
-        <figure>
-          <a href="blogs/mvc.html">
-            <img src="mvc_pattern.png" class="blog_page_imgs" alt="MVC pattern">
-            <figcaption><sub>MVC pattern: Past, present and future</sub></figcaption>
-          </a>
-        </figure>
-      </div>
-
-    </div>
+  </div>
 
 
-  </main>
+  <!--Include Vue-->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+  <!--Create Vue instance-->
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        pageName: 'Blogs',
+        blogItems: [{
+          href: 'blogs/growth_of_big_data.html',
+          imgSrc: 'big_data_growth_picture.png',
+          alt: 'Big data growth',
+          text: 'Big data growth'
+        },
+        {
+          href: 'blogs/big_data_engineers_toolkit.html',
+          imgSrc: 'big_data_engineer.png',
+          alt: 'Big data Engineer',
+          text: 'Big Data Engineer\'s toolkits'
+        },
+        {
+          href: 'blogs/intro_typescript.html',
+          imgSrc: 'typescript.png',
+          alt: 'Typescript',
+          text: 'An introduction to typescript'
+        },
+        {
+          href: 'blogs/mvc.html',
+          imgSrc: 'mvc_pattern.png',
+          alt: 'MVC pattern',
+          text: 'MVC pattern: Past, present and future'
+        }],
+        navItems:[
+        {
+          href: 'index.html',
+          name: 'About',
+        },
+        {
+          href: 'blog.html',
+          name: 'Blogs',
+        },
+        {
+          href: 'apps.html',
+          name: 'Apps',
+        },
+        {
+          href: 'quotes.html',
+          name: 'Quotes',
+        },
+        {
+          href: 'contact.html',
+          name: 'Contact',
+        }
+        ]
+      }
+    })
+  </script>
+
 </body>
 
 </html>
