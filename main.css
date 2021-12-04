@@ -1,0 +1,224 @@
+  body {
+    background-color: lightgrey;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left
+  }
+
+  mark {
+    color: black;
+    background-color: lightgrey
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:active {
+    text-decoration: underline;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  /*This is a class to format the main header image named - Data Dude*/
+  #head_image {
+    width: 300px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*Class for the pictures under the index page*/
+  .row {
+    display: flex;
+  }
+
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  .wrapper {
+    display: grid;
+  }
+
+  .my_pic {
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .blog_list {
+    text-align: center;
+  }
+
+  /*Class for the pictures under the index page*/
+  .blog_row {
+    display: flex;
+  }
+
+  .blog_column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  .blog_page_imgs {
+    height: 10rem;
+    width: 15rem;
+  }
+
+.app_sub {
+  text-align: center;
+}
+
+  /* Class for the explosion picture in the blog page*/
+  .explosion_pic {
+    width:50px;
+    height:50px;
+  }
+
+  /* Class for the video in the blog page*/
+  .blog_video {
+    width:30%;
+  }
+
+  /* Class to style the hand holding pencil image in contact page */
+  .pencil_pic {
+    width:50px;
+    height:50px;
+  }
+  /* Style inputs with type="text", select elements and textareas */
+  input[type=text], select, textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+      /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: black;
+  }
+
+  /* Styling the navigation*/
+  .nav {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .nav-item {
+    display: inline-block;
+  }
+
+  .nav-item a {
+    display: block;
+    color: lightgrey;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  .nav-item a:hover {
+    background-color: #111;
+  }
+
+  /* Small device*/
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: white;
+    }
+
+    .nav {
+      width: 100%;
+    }
+
+    .nav-item {
+      width: 100%;
+      float: none;
+    }
+
+    /* Have the images stacked one over the other in a smaller screen*/
+    .row {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+    }
+
+    /* Move button to the middle in a smaller screen */
+    input[type=submit] {
+      margin: auto;
+      display: block;
+    }
+  }
+
+  /* Medium device*/
+  @media only screen and (min-width: 600px) and (max-width: 768px) {
+    body {
+      background-color: Gray;
+      color: white;
+    }
+
+    input[type=submit] {
+      background-color: darkgrey;
+    }
+
+    /* Have the images stacked one over the other in a smaller screen*/
+    .row {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+    }
+  }
