@@ -7,7 +7,9 @@
     border-collapse: collapse;
     text-align: left
   }
-
+  h4,h3 {
+    display: inline
+  }
   mark {
     color: black;
     background-color: lightgrey
@@ -223,13 +225,14 @@
     .nav-list {
       position: fixed;
       left: -100%;
+      z-index: 5;
       top: 5rem;
       flex-direction: column;
-      background-color: #lightgrey;
+      background-color: grey;
       width: 25%;
       text-align: center;
       transition: 0.3s;
-      opacity: 0.75;
+      opacity:0.95;
     }
 
     .nav-list.active {
@@ -237,7 +240,7 @@
     }
 
     .nav-item {
-      margin: 2rem 2;
+      margin: 0 ;
     }
 
     .hamburger {
