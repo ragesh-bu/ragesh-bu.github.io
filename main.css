@@ -133,7 +133,7 @@
   }
 
 /*Styleing code blocks */
-  pre code {
+  code {
   background-color: #eee;
   border: 1px solid #999;
   display: block;
