@@ -132,6 +132,15 @@
     height: 50px;
   }
 
+/*Styleing code blocks */
+  pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  text-align: left;
+  padding: 10px;
+}
+
   /* Style inputs with type="text", select elements and textareas */
   input[type=text], select, textarea {
     width: 100%;

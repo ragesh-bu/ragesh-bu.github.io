@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js_generator</title>
+  <link href="../main.css" media="screen" rel="stylesheet">
+</head>
+
+<body>
+  <main class="wrapper">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="../index.html" class="nav-link"> About </a></li>
+        <li class="nav-item"><a href="../blog.html" class="nav-link"> Blogs </a></li>
+        <li class="nav-item"><a href="../apps.html" class="nav-link"> Apps</a></li>
+        <li class="nav-item"><a href="../quotes.html" class="nav-link"> Quotes</a></li>
+        <li class="nav-item"><a href="../contact.html" class="nav-link"> Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <script src="../navigation.js"></script>
+    <p></p>
+    <h1>Javascript generator</h1>
+    <p>
+      The feature I will be discussing in this post is generators. This is a new
+      feature that was introduced in ES6.<br>
+      A generator is a function that can be stopped midway and start off from
+      where it left. This is very different from a normal function which runs
+      to completion and if started again will start from the beginning.<br>
+      Let’s look at a normal function for generating Fibonacci numbers for n terms:
+    <pre>
+        <code>
+// program to generate fibonacci series up to n terms
+// take input from the user
+const number = parseInt(prompt("Enter the number of terms: "));
+
+console.log("Fibonacci Series:");
+for (i of fibonacci(number)) {
+  console.log(i);
+}
+
+function fibonacci(nums) {
+
+  let fib = [0, 1];
+  let data = [];
+
+  for(let i = 2; i <= nums; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+    data.push(fib[i]);
+  }
+  return data;
+}
+        </code>
+      </pre>
+    <p>
+      Code pen link - <a href=https://codepen.io/ragesh_d/pen/yLzNQPG target="_blank">
+        https://codepen.io/ragesh_d/pen/yLzNQPG</a>
+    </p>
+    This is how you would create one using generators:
+    <pre>
+          <code>
+// Fibonacci generator
+function* fibonacci() {
+  [a, b] = [0, 1]
+  while (true) {
+    yield a;
+    [a, b] = [b, a + b]
+  }
+}
+// Instantiates the fibonacci generator
+var fib = fibonacci();
+const number = parseInt(prompt('Enter the number of terms: '));
+// gets first n numbers from the Fibonacci generator starting from 0
+for (let i = 0; i < number; i++) {
+  console.log(fib.next().value);
+}
+          </code>
+    </pre>
+    <p>
+      Code pen link - <a href=https://codepen.io/ragesh_d/pen/dyVoQdp target="_blank">
+        https://codepen.io/ragesh_d/pen/dyVoQdp</a>
+    </p>
+    The advantage of the generator method is that the calling program does not get
+    back a list but just the next value, this means that it does not need to
+    store the whole list so space wise it’s a much more efficient approach. <br>
+    Now let’s see the syntax to creating a generator function, as can be seen
+    from the example the function* is used to differentiate a generator from
+    a normal function. It also uses a yield which is like a return but the
+    function will halt after returning until the calling function invokes it using a next(). <br>
+    Let’s go over some advantages of generators:
+    <ol>
+      <li>Generator values are lazily evaluated and until a value is request it does not get computed</li>
+      <li>Using generator can let you do much more memory efficient operations</li>
+    </ol>
+      Some disadvantages of generators are:
+      <ol>
+        <li>Once a generator has looped over a possible set of values it can’t restart
+          , that’s why it’s usually to keep generators in a infinite loop.</li>
+        <li>It’s not easily possible to go back in value with a generator</li>
+      </ol>
+  </p>
+  <h3>References:</h3>
+  <ul>
+    <li><a href="https://github.com/lukehoban/es6features#promises"
+      target="_blank">https://github.com/lukehoban/es6features#promises</a></li>
+    <li><a href="https://codeburst.io/understanding-generators-in-es6-javascript-with-examples-6728834016d5"
+      target="_blank">https://codeburst.io/understanding-generators-in-es6-javascript-with-examples-6728834016d5</a></li>
+  </ul>
+  </main>
+</body>
+
+</html>
