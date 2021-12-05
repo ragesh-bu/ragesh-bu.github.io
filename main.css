@@ -13,6 +13,10 @@
     background-color: lightgrey
   }
 
+  a {
+    white-space: nowrap;
+  }
+
   a:link {
     text-decoration: none;
   }
@@ -105,27 +109,27 @@
     width: 15rem;
   }
 
-
-.app_sub {
-  text-align: center;
-}
+  .app_sub {
+    text-align: center;
+  }
 
   /* Class for the explosion picture in the blog page*/
   .explosion_pic {
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
   }
 
   /* Class for the video in the blog page*/
   .blog_video {
-    width:30%;
+    width: 30%;
   }
 
   /* Class to style the hand holding pencil image in contact page */
   .pencil_pic {
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
   }
+
   /* Style inputs with type="text", select elements and textareas */
   input[type=text], select, textarea {
     width: 100%;
@@ -195,19 +199,63 @@
     background-color: #111;
   }
 
+
+  .hamburger {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+  }
+
   /* Small device*/
   @media only screen and (max-width: 600px) {
     body {
       background-color: white;
     }
 
-    .nav {
-      width: 100%;
+    .nav-list {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #lightgrey;
+      width: 25%;
+      text-align: center;
+      transition: 0.3s;
+      opacity: 0.75;
+    }
+
+    .nav-list.active {
+      left: 0;
     }
 
     .nav-item {
-      width: 100%;
-      float: none;
+      margin: 2rem 2;
+    }
+
+    .hamburger {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
     }
 
     /* Have the images stacked one over the other in a smaller screen*/
@@ -218,7 +266,7 @@
     }
 
     /* Have the images stacked one over the other in a smaller screen*/
-    .blog_row{
+    .blog_row {
       display: inline-block;
       width: 100%;
       vertical-align: top;
@@ -251,12 +299,10 @@
     }
 
     /* Have the images stacked one over the other in a smaller screen*/
-    .blog_row{
+    .blog_row {
       display: inline-block;
       width: 100%;
       vertical-align: top;
       text-align: center;
     }
-
-
   }

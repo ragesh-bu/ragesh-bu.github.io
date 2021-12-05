@@ -8,22 +8,31 @@
   <title>data_dude</title>
   <link href="main.css" media="screen" rel="stylesheet">
   <link href="print.css" media="print" rel="stylesheet">
+
 </head>
 
 <body>
   <main class="wrapper">
-  <img src="data_dude.png" id="head_image" alt="data dude">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item"><a href="index.html"> About </a></li>
-      <li class="nav-item"><a href="blog.html"> Blogs </a></li>
-      <li class="nav-item"><a href="apps.html"> Apps</a></li>
-      <li class="nav-item"><a href="quotes.html"> Quotes</a></li>
-      <li class="nav-item"><a href="contact.html"> Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html" class="nav-link"> About </a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link"> Blogs </a></li>
+        <li class="nav-item"><a href="apps.html" class="nav-link"> Apps</a></li>
+        <li class="nav-item"><a href="quotes.html" class="nav-link"> Quotes</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link"> Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <script src="navigation.js"></script>
+
+    <img src="data_dude.png" id="head_image" alt="data dude">
+    <p>
     <h1>About</h1>
-    <img src="ragesh_headshot.png" class="my_pic" alt="ragesh headshot" >
+    <img src="ragesh_headshot.png" class="my_pic" alt="ragesh headshot">
     <p>
       My name is Ragesh and I am from California.
       I have been working as a software backend engineer for the last 15 years.
@@ -60,9 +69,8 @@
         </figure>
       </div>
     </div>
-
-
   </main>
 </body>
+
 
 </html>

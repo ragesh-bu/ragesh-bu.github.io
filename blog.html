@@ -11,16 +11,45 @@
 </head>
 
 <body>
-  <div id="app" >
+  <main class="wrapper">
     <nav class="nav">
-      <ul class="nav-list" >
-        <li class="nav-item" v-for="navItem in navItems">
-          <a v-bind:href="navItem.href"> {{ navItem.name }} </a>
-        </li>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="index.html" class="nav-link"> About </a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link"> Blogs </a></li>
+        <li class="nav-item"><a href="apps.html" class="nav-link"> Apps</a></li>
+        <li class="nav-item"><a href="quotes.html" class="nav-link"> Quotes</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link"> Contact</a></li>
       </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
-    <p>
+    <script src="navigation.js"></script>
+  </main>
+  <div id="app" >
     <h1>{{ pageName }}</h1>
+    <p>
+      These are some blogs I created as part of a javascript class when I was studying and researching
+      javascript, CSS, MVC patterns. I also like to write about my other area of interest which is
+      big data and data science. As a beginner in blogging I found some useful tips which I would like to
+      share on how to be better at blogging:
+      <ul>
+        <li>Try and write frequently, whatever its is that you like to blog about just try to do it at a regular interval.
+          It needn't be every day or other day even twice a week is a good cadence.</li>
+        <li>Try to publish whatever you write this will not only make you a better writer but also helps keep you motivated,
+          imagine there is a loyal audience waiting to read your blogs and that will help you write regularly.</li>
+        <li>Publish your blogs in forums where readers can comment, this helps you understand your shortcomings and help improve
+          your writing style, and always be thankful to the people who comment on your article even when the comments are negative.</li>
+        <li>Set goals for your writing, set them to be achievable, some goals can be like - write atleast 2 articles every week,
+          publish articles in 2 different forums etc. After setting these goals write then in a paper and put it at your desktop to keep you
+           motivated.
+      </ul>
+      <br>
+      Hope these tips help you with your writing goals, and please read my blogs .
+    </p>
+
     <div class="blog_vue_row" >
       <div class ="blog_vue_column" v-for="(item,index) in blogItems">
         <figure>
@@ -67,29 +96,29 @@
           imgSrc: 'mvc_pattern.png',
           alt: 'MVC pattern',
           text: 'MVC pattern: Past, present and future'
-        }],
-        navItems:[
-        {
-          href: 'index.html',
-          name: 'About',
-        },
-        {
-          href: 'blog.html',
-          name: 'Blogs',
-        },
-        {
-          href: 'apps.html',
-          name: 'Apps',
-        },
-        {
-          href: 'quotes.html',
-          name: 'Quotes',
-        },
-        {
-          href: 'contact.html',
-          name: 'Contact',
-        }
-        ]
+        }]
+        // navItems:[
+        // {
+        //   href: 'index.html',
+        //   name: 'About',
+        // },
+        // {
+        //   href: 'blog.html',
+        //   name: 'Blogs',
+        // },
+        // {
+        //   href: 'apps.html',
+        //   name: 'Apps',
+        // },
+        // {
+        //   href: 'quotes.html',
+        //   name: 'Quotes',
+        // },
+        // {
+        //   href: 'contact.html',
+        //   name: 'Contact',
+        // }
+        // ]
       }
     })
   </script>
