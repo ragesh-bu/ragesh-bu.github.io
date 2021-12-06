@@ -8,6 +8,7 @@
   <title>introduction typescript</title>
   <link href="../main.css" media="screen" rel="stylesheet">
 </head>
+
 <body>
   <main class="wrapper">
     <nav class="nav">
@@ -25,10 +26,89 @@
       </div>
     </nav>
     <script src="../navigation.js"></script>
-    <p>
     <h1>Introduction to Typescript
     </h1>
-
+    My background in programming languages has been strongly typed languages like
+    Java and C thus when I first saw JavaScript I was little taken aback by the fact
+    that you don’t have to declare the type of your variable before using it.
+    I see the advantages, it does lend itself to easily start programming and
+    I believe if you are doing some sort of algorithm coding problem saves you
+    a ton of declaration code and syntaxes you need to remember but it also makes
+    complex code difficult to debug especially if its poorly documented.<br>
+    I my search for a solution I stumbled upon Typescript and this is an article
+    about a beginner’s review of Typescript and I have formatted it in a question
+    answer way in order of how I was thinking about Typescript.<br>
+    <ul>
+      <li>
+        <h4>What is Typescript?</h4><br>Typescript is a strongly typed programming language that builds on JavaScript
+        , giving you better tooling at any scale. (https://www.typescriptlang.org)
+      </li>
+      <li>
+        <h4>How to install Typescript?</h4><br>There are various resources on the internet to install Typescript
+        , I use the Atom IDE so these are the steps I followed:
+        <ul>
+          <li>Select Atom -> Preferences -> Install </li>
+          <li>Search for “Typescript”, and the package atom-typescript is shown which has the highest number of installs (1.9 M when I was looking)</li>
+          <li>Search for atom-ide-ui and install it</li>
+          <li>You are all set</li>
+        </ul>
+        Other ways to install typescript can be found at -
+        <a href=https://www.typescriptlang.org/download target="_blank">https://www.typescriptlang.org/download</a>
+      </li>
+      <li>
+        <h4>How to start writing some Typescript code?</h4><br>
+        <ul>
+          <li>Create a file in Atom with the .ts extension</li>
+          <li>Paste below lines of code :
+            <pre>
+                  <code>
+const obj = { width: 10, height: 15 };
+const area = obj.width * obj.height;
+console.log(area)
+                  </code>
+                </pre>
+          </li>
+          <li>In Atom click on packages and click build, this will create a .js file
+            from the typescript file and you can run this file if you have the script package installed in Atom</li>
+        </ul>
+      </li>
+      <li>
+        <h4>How is this better than javascript?</h4><br>
+        <ul>
+          <li>Now lets see the power of typescript, in the above code replace the second line of code as below :
+            <pre>
+              <code>
+  const area = obj.width * obj.heigth;
+              </code>
+            </pre>
+          </li>
+          <li>In regular javascript this will not show any error until you run the script
+            when it will return result as NaN since it will consider obj.heigth as a new property of obj that has not been set</li>
+          <li>In typescript you will see a swiggly red line under the obj.heigth
+            which will inform you that height is not a property that exists thus saving you a lot of pain when trying to debug complex programs</li>
+        </ul>
+      </li>
+      <li>
+        <h4>Why would I not use typescript?</h4><br>
+        <ul>
+          <li>It can be a little inconvenient to keep compiling your code to create JavaScript file</li>
+          <li>Reuse of JavaScript libraries is additional work
+            (check : <a href="https://www.techiediaries.com/use-external-javascript-libraries-typescript-projects/" target="_blank">https://www.techiediaries.com/use-external-javascript-libraries-typescript-projects/</a>)
+          </li>
+          <li>Can be an overkill for small projects</li>
+        </ul>
+      </li>
+    </ul>
+    Overall I read that Typescript is the way to go when you are dealing with large projects
+    with multiple developers, and I see the benefits of this having experienced the difficulties
+    in debugging python code, so I will be starting to use typescript as and when it’s appropriate
+    to write JavaScript code.
+    <h3>References:</h3>
+    <ul>
+      <li><a href="https://www.typescriptlang.org" target="_blank">https://www.typescriptlang.org</a></li>
+      <li><a href="https://atom.io/packages/atom-typescript" target="_blank">https://atom.io/packages/atom-typescript</a></li>
+      <li><a href="https://www.quora.com/If-TypeScript-is-a-superset-of-JavaScript-why-do-people-still-use-JavaScript" target="_blank">https://www.quora.com/If-TypeScript-is-a-superset-of-JavaScript-why-do-people-still-use-JavaScript</a></li>
+    </ul>
   </main>
 </body>
 
