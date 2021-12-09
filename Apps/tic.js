@@ -114,9 +114,7 @@ function myfunc() {
         window.alert('Player X won');
     }
 
-    // Checking of Player X finsh
-    // Checking for Player 0 starts, Is player 0 won or
-    // not and after that disabled all the other fields
+    // Check if player X finished and player O started and won
     else if ((b1 == '0' || b1 == '0') && (b2 == '0' ||
         b2 == '0') && (b3 == '0' || b3 == '0')) {
         document.getElementById('print')
@@ -214,8 +212,7 @@ function myfunc() {
         window.alert('Player 0 won');
     }
 
-    // Checking of Player 0 finsh
-    // Here, Checking about Tie
+    // Checking about Tie
     else if ((b1 == 'X' || b1 == '0') && (b2 == 'X'
         || b2 == '0') && (b3 == 'X' || b3 == '0') &&
         (b4 == 'X' || b4 == '0') && (b5 == 'X' ||
@@ -228,7 +225,7 @@ function myfunc() {
     }
     else {
 
-        // Here, Printing Result
+        // Printing Result
         if (flag == 1) {
             document.getElementById('print')
                 .innerHTML = "Player X Turn";

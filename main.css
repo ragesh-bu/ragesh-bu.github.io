@@ -1,5 +1,13 @@
   body {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
+    --stripe: #f1f2e6;
+    --bg: #e4eef2;
+
+  background: linear-gradient(135deg, var(--bg) 50%, transparent 50%) -50px 0,    linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--bg) 25%, transparent 50%),
+    linear-gradient(45deg, var(--bg) 25%, transparent 50%);
+  background-size: 100px 100px;
+  background-color: var(--stripe);
   }
 
   table, th, td {
@@ -225,11 +233,36 @@
     background-color: #101010;
   }
 
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    /* background-color: lightgrey; */
+    color: #fff;
+}
+
+.footer_row {
+  display: flex;
+}
+
+.footer_column {
+  color: black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.footer_images {
+  width: 1.5rem;
+  heigth: 1.5rem;
+}
+
   /* Small device*/
   @media only screen and (max-width: 600px) {
-    body {
+    /* body {
       background-color: white;
-    }
+    } */
 
     .nav-list {
       position: fixed;
@@ -294,10 +327,10 @@
 
   /* Medium device*/
   @media only screen and (min-width: 600px) and (max-width: 768px) {
-    body {
+    /* body {
       background-color: Gray;
       color: white;
-    }
+    } */
 
     input[type=submit] {
       background-color: darkgrey;
