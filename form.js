@@ -50,6 +50,8 @@ function validateForm(e) {
     return false;
   }
 
+
+
   alert("Thank you for connecting!! Have a nice day")
   return true;
 }
@@ -65,4 +67,14 @@ function errorMessageElem(msg, elemId) {
   var error = document.getElementById(elemId);
   error.textContent = msg;
   error.style.color = "red"
+}
+
+function toggleHiddenField(value) {
+
+  let countryEnter = document.getElementById("countryEnter");
+  let countrySelect = document.getElementById("countrySelect");
+  if (value == "others") {
+    countryEnter.style.display = "block";
+    countrySelect.style.display = "none";
+  }
 }

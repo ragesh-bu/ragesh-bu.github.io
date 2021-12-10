@@ -35,23 +35,29 @@
     </h1>
     <form id="myForm" name="myForm" method="post" novalidate onsubmit="return validateForm(event);">
 
-      <label for="fname">First Name *</label>
+      <label for="firstName">First Name *</label>
       <input type="text" id="firstName" name="firstName" placeholder="First name" required><span id="firstNameError"></span>
       <br><br>
-      <label for="fname">Last Name *</label>
+      <label for="lastName">Last Name *</label>
       <input type="text" id="lastName" name="lastName" placeholder="Last name" required><span id="lastNameError"></span>
       <br><br>
       <label for="email">Email *</label>
       <input type="text" id="email" name="email" placeholder="someone@email.com" required><span id="emailError"></span>
       <br><br>
+      <div id= "countrySelect">
       <label for="country">Country</label>
-      <select id="country" name="country">
+      <select id="country" name="country" onchange="toggleHiddenField(this.value)">
+        <option value="none" selected disabled hidden autocomplete="off">select a country</option>
         <option value="india">India</option>
         <option value="canada">Canada</option>
         <option value="usa">USA</option>
-        <option value="other">Other</option>
+        <option value="others">Others</option>
       </select>
-      <br><br>
+      </div>
+      <div id= "countryEnter" style="display: none;">
+      <label for="country">Country</label>
+      <input type="text" id="countryName" name="countryName" placeholder="enter country name">
+      </div>
       <label for="message">Message</label>
       <textarea id="message" name="message" placeholder="message"></textarea>
 
