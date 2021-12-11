@@ -8,6 +8,10 @@
   <title>blogs</title>
   <link href="main.css" media="screen" rel="stylesheet">
   <link href="print.css" media="print" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -30,6 +34,7 @@
   </main>
   <div id="app" >
     <h1>{{ pageName }}</h1>
+    <div class="maintext">
       These are some blogs I created as part of a javascript class when I was studying and researching
       javascript, CSS, MVC patterns. I also like to write about my other area of interest which is
       big data and data science. As a beginner in blogging I found some useful tips which I would like to
@@ -58,6 +63,7 @@
         </figure>
         <br v-if="index>3"/>
       </div>
+      </div>
     </div>
   </div>
 
@@ -80,14 +86,14 @@
         {
           href: 'blogs/js_generator.html',
           imgSrc: 'assets/generator.png',
-          alt: 'Javascript generators',
-          text: 'Javascript generators'
+          alt: 'JavaScript generators',
+          text: 'JavaScript generators'
         },
         {
           href: 'blogs/intro_typescript.html',
           imgSrc: 'assets/typescript.png',
-          alt: 'Typescript',
-          text: 'An introduction to typescript'
+          alt: 'TypeScript',
+          text: 'An introduction to TypeScript'
         },
         {
           href: 'blogs/mvc.html',

@@ -8,6 +8,9 @@
   <title>contact</title>
   <link href="main.css" media="screen" rel="stylesheet">
   <link href="print.css" media="print" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
   <script src="form.js"></script>
 </head>
 
@@ -33,6 +36,7 @@
     <h1>Let us connect
       <img src="assets/write_to_me.png" alt="hand holding pencil" class="pencil_pic"/>
     </h1>
+    <div class="maintext">
     <form id="myForm" name="myForm" novalidate onsubmit="return validateForm(event);">
 
       <label for="firstName">First Name *</label>
@@ -64,6 +68,7 @@
       <input type="submit" value="Submit">
 
     </form>
+    </div>
   </main>
 </body>
 
