@@ -71,6 +71,8 @@
 
   .maintext {
     padding: 10px;
+    display: flex;
+    flex-flow: wrap;
   }
 
   #app {
